@@ -1,6 +1,6 @@
 package org.xi.userservice.service;
 
-import org.xi.uservo.UserVo;
+import org.xi.vo.user.UserVo;
 
 public interface UserService {
 

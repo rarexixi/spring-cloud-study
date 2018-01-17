@@ -5,11 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.xi</groupId>
-    <artifactId>user-model</artifactId>
+    <artifactId>order-model</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
 
-    <name>user-model</name>
-    <url>http://maven.apache.org</url>
 
 </project>

@@ -1,6 +1,8 @@
-package org.xi.uservo;
+package org.xi.vo.user;
 
-public class UserVo {
+import java.io.Serializable;
+
+public class UserVo implements Serializable {
 
     private Integer id;
     private String username;

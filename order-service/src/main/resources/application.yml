@@ -1,9 +1,9 @@
 server:
-  port: 8810
+  port: 8811
 
 spring:
   application:
-    name: user-service
+    name: order-service
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/quick_test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&rewriteBatchedStatements=true&useServerPrepStmts=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
