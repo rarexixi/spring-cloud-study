@@ -1,0 +1,20 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8800/eureka/
+
+server:
+  port: 8830
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/rarexixi/springcloudstudy
+          search-paths: config
+#          username:
+#          password:
+      label: master
