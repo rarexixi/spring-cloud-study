@@ -1,0 +1,14 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8800/eureka/
+
+spring:
+  cloud:
+    config:
+      label: master
+      profile: dev
+#      uri: http://127.0.0.1:8830
+      discovery:
+        enabled: true
+        service-id: config-server

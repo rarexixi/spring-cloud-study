@@ -1,5 +1,6 @@
+
 server:
-  port: 8811
+  port: 8920
 
 spring:
   application:
@@ -9,15 +10,20 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:8800/eureka/
+  rabbitmq:
+    host: 10.16.1.136
+    port: 5672
+    username: admin
+    password: 123456
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   config-location: classpath:mybatis-config.xml
   type-aliases-package: org.xi.quick.codegenerator.mapper
+
+management:
+  security:
+    enabled: false
 
 # 熔断必须要下面一段
 feign:
@@ -26,3 +32,9 @@ feign:
 
 logging:
   level: info
+
+info:
+  app:
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"
