@@ -1,0 +1,22 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8800/eureka/
+
+server:
+  port: 8810
+
+spring:
+  application:
+    name: router-zuul-service
+
+zuul:
+  routes:
+    user:
+      path: /user/**
+      serviceId: user-service
+    order:
+      path: /order/**
+      serviceId: order-service
+
+
