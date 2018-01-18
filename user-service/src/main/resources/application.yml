@@ -1,5 +1,10 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8800/eureka/
+
 server:
-  port: 8810
+  port: 8910
 
 spring:
   application:
@@ -9,10 +14,6 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:8800/eureka/
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
