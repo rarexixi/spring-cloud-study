@@ -19,6 +19,7 @@
         <module>user-model</module>
         <module>order-service</module>
         <module>order-model</module>
+        <module>common-model</module>
     </modules>
 
     <parent>
