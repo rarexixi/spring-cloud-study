@@ -5,19 +5,24 @@ spring:
   application:
     name: order-service
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/quick_test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&rewriteBatchedStatements=true&useServerPrepStmts=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/study_order?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&rewriteBatchedStatements=true&useServerPrepStmts=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
 eureka:
   client:
     service-url:
-      default-zone: http://127.0.0.1:8800/eureka/
+      defaultZone: http://127.0.0.1:8800/eureka/
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   config-location: classpath:mybatis-config.xml
   type-aliases-package: org.xi.quick.codegenerator.mapper
+
+# 熔断必须要下面一段
+feign:
+  hystrix:
+    enabled: true
 
 logging:
   level: info

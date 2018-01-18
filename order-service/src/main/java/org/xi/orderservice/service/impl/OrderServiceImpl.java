@@ -1,10 +1,12 @@
 package org.xi.orderservice.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.xi.orderservice.mapper.OrderMapper;
 import org.xi.orderservice.service.OrderService;
 import org.xi.vo.order.OrderVo;
 
+@Service
 public class OrderServiceImpl implements OrderService {
 
     @Autowired
