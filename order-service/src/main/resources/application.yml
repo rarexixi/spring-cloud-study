@@ -11,7 +11,7 @@ spring:
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
   rabbitmq:
-    host: 10.16.1.136
+    host: rarexixi.arch
     port: 5672
     username: admin
     password: 123456
