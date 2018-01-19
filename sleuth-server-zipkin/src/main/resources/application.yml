@@ -1,0 +1,29 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8800/eureka/
+
+server:
+  port: 8840
+
+spring:
+  application:
+    name: zipkin-server
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/study_zipkin?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&rewriteBatchedStatements=true&useServerPrepStmts=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+#    initialize: true
+#    continue-on-error: true
+#    schema:
+#      - classpath:/zipkin.sql
+  rabbitmq:
+    host: 10.16.1.136
+    port: 5672
+    username: admin
+    password: 123456
+
+zipkin:
+  storage:
+    type: mysql
