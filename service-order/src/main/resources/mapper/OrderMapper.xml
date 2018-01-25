@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.xi.service.order.mapper.OrderMapper">
+    <resultMap id="BaseModelMap" type="org.xi.vo.order.OrderVo">
+        <result property="id" column="id"/>
+        <result property="orderNum" column="order_num"/>
+        <result property="userId" column="user_id"/>
+        <result property="isDeleted" column="is_deleted"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+    <select id="getById" resultMap="BaseModelMap" parameterType="java.lang.Integer">
+        SELECT DISTINCT
+        `order`.`id`,
+        `order`.`order_num`,
+        `order`.`user_id`,
+        `order`.`is_deleted`,
+        `order`.`create_time`,
+        `order`.`update_time`
+        FROM
+        `order`
+        WHERE
+        `order`.`id` = #{id}
+    </select>
+</mapper>

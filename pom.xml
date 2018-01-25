@@ -14,15 +14,16 @@
     <url>http://maven.apache.org</url>
 
     <modules>
-        <module>registry-server-eureka</module>
-        <module>user-service</module>
-        <module>user-model</module>
-        <module>order-service</module>
-        <module>order-model</module>
-        <module>common-model</module>
-        <module>router-zuul-service</module>
-        <module>config-server</module>
-        <module>sleuth-server-zipkin</module>
+        <module>dashboard-hystrix</module>
+        <module>model-common</module>
+        <module>model-order</module>
+        <module>model-user</module>
+        <module>server-config</module>
+        <module>server-registry-eureka</module>
+        <module>server-sleuth-zipkin</module>
+        <module>service-order</module>
+        <module>service-router-zuul</module>
+        <module>service-user</module>
     </modules>
 
     <parent>
